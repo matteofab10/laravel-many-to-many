@@ -7,6 +7,10 @@
         @if ($post->category)
          <h3>{{$post->category->name}}</h3>
         @endif
+
+        @foreach ($post->tags as $tag)
+          <span class="badge bg-primary">{{$tag->name}}</span>          
+        @endforeach
         <p>{{ $post->content }}</p>
       </div>
     
